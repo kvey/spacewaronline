@@ -1,1 +1,36 @@
 @import "compass_twitter_bootstrap";
+
+body{
+    font-family: monospace;
+    background: #111;
+    color: #EEE;
+}
+.term-container{
+}
+
+.term-lines{
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.term-line{
+    width: 100%;
+}
+.term-input-line{
+    background: #000;
+}
+.term-cursor.inverted{
+    background: #aaa;
+    display: inline-block;
+    width: 7px;
+    height: 15px;
+    color: #111;
+}
+
+.hidden{
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+
+}
+

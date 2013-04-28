@@ -2,8 +2,15 @@
 
 angular.module('spacewarcliApp')
   .controller 'CliCtrl', ['$scope', 'angularFire', ($scope, angularFire) ->
-    promise = angularFire('https://clispacewar.firebaseIO.com/commands', $scope, 'commands', [])
-    promise.then ->
+
+    promiseCommands = angularFire('https://clispacewar.firebaseIO.com/user/commands', $scope, 'commands', [])
+    promiseCommands.then ->
       $scope.newCommand = () ->
-        $scope.commands.push($scope.commandInput)
+        cmdTokens = $scope.commandInput.split(" ")
+        $scope.commands.push({
+          text: $scope.commandInput
+          method: cmdTokens[0]
+          args: _.tail(cmdTokens)
+        })
+        $scope.commandInput = ""
   ]

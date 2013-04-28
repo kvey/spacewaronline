@@ -5,7 +5,7 @@ angular.module('spacewarcliApp', ['firebase'])
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'CliCtrl'
+        controller: 'HomeCtrl'
       })
       .otherwise({
         redirectTo: '/'
