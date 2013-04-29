@@ -2,7 +2,6 @@
 
 angular.module('spacewarcliApp')
   .controller 'CliCtrl', ['$scope', 'angularFire', ($scope, angularFire) ->
-
     promiseCommands = angularFire('https://clispacewar.firebaseIO.com/user/commands', $scope, 'commands', [])
     promiseCommands.then ->
       $scope.newCommand = () ->
@@ -14,3 +13,4 @@ angular.module('spacewarcliApp')
         })
         $scope.commandInput = ""
   ]
+
