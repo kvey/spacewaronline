@@ -8,6 +8,7 @@ angular.module('spacewarcliApp')
         cmdTokens = $scope.commandInput.split(" ")
         $scope.commands.push({
           text: $scope.commandInput
+          user: $scope.user
           method: cmdTokens[0]
           args: _.tail(cmdTokens)
         })

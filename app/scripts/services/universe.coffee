@@ -5,7 +5,13 @@ angular.module('spacewarcliApp')
     # Service logic
     # ...
 
-    meaningOfLife = 42
+    world = new CANNON.World()
+    world.gravity.set(0,0,0)
+    world.broadphase = new CANNON.NaiveBroadphase()
+
+
+
+
 
 
     # Public API here
